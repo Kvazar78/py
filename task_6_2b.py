@@ -1,9 +1,10 @@
 #!/usr/bin/python3.7
 
-ip = input('Введи IP-адрес :').split('.')
-addr = 1
+addr = 0
 
-while addr True:
+while addr == 0:
+    addr = 1
+    ip = input('Введи IP-адрес :').split('.')
     if len(ip) == 4:
         for num in ip:
             try:
@@ -18,7 +19,7 @@ while addr True:
     else:
         addr = 0
 
-if addr != 0:
+if addr == 1:
     if 1 <= int(ip[0]) <= 223:
         print('unicast')
     elif 224 <= int(ip[0]) <= 239:
@@ -29,5 +30,3 @@ if addr != 0:
         print('local broadcast')
     else:
         print('unused')
-else:
-    print('Неправильный IP-адрес')
