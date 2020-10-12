@@ -8,3 +8,5 @@ for line in f:
 	print("Next-Hop           " + ospf[4].strip(','))
 	print("Last update        " + ospf[5].strip(','))
 	print("Outbound Interface " + ospf[6])
+	print('\n' + '-' * 30)
+	
