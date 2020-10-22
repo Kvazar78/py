@@ -5,6 +5,10 @@ from sys import argv
 conf = argv[1]
 f = open(conf, 'r')
 
+#print(f.read())
 for line in f:
-    print(line)
+    if '!' in line:
+        continue
+    else:
+        print(line.rstrip())
 
